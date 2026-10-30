@@ -1,1 +1,300 @@
-pagina web de sergio
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f7f4">
+  <meta name="description" content="Perfil profesional de Sergio: Graduado en Marketing y estudiante de Data Science, Big Data & Business Analytics.">
+  <title>Sergio — Marketing &amp; Data</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f6f7f4;
+      --surface: #ffffff;
+      --ink: #1d2925;
+      --muted: #64716b;
+      --accent: #286b55;
+      --accent-soft: #e7f0eb;
+      --line: #e6e9e5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(100% - 48px, 1040px);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      color: var(--ink);
+      font-size: 1rem;
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      text-decoration: none;
+    }
+
+    .topbar-label {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    main {
+      padding: 78px 0 88px;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin-bottom: 62px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 22px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #64a383;
+      content: "";
+    }
+
+    h1 {
+      max-width: 700px;
+      margin: 0;
+      font-size: clamp(2.7rem, 7vw, 5.2rem);
+      font-weight: 650;
+      letter-spacing: -0.075em;
+      line-height: 1.04;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .intro-copy {
+      max-width: 590px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 650;
+      letter-spacing: -0.03em;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .education-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .education-card {
+      min-height: 218px;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--surface);
+    }
+
+    .card-label {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 650;
+    }
+
+    .education-card h3 {
+      margin: 0 0 7px;
+      font-size: 1.22rem;
+      font-weight: 650;
+      letter-spacing: -0.035em;
+      line-height: 1.35;
+    }
+
+    .education-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .focus {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .focus-label {
+      margin-right: 4px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .tag {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink);
+      font-size: 0.82rem;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0 30px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 36px, 1040px);
+      }
+
+      .topbar {
+        padding: 22px 0;
+      }
+
+      main {
+        padding: 60px 0 66px;
+      }
+
+      .intro {
+        margin-bottom: 48px;
+      }
+
+      .education-list {
+        grid-template-columns: 1fr;
+      }
+
+      .education-card {
+        min-height: auto;
+        padding: 23px;
+      }
+
+      .card-label {
+        margin-bottom: 19px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Sergio, inicio">Sergio.</a>
+      <span class="topbar-label">Perfil profesional</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="eyebrow">Marketing · Datos · Negocio</p>
+        <h1 id="intro-title">Hola, soy Sergio.<br><span>Marketing con mirada analítica.</span></h1>
+        <p class="intro-copy">
+          Graduado en Marketing y estudiante de Data Science, Big Data &amp; Business Analytics.
+          Me interesa conectar la visión de negocio con el valor de los datos.
+        </p>
+      </section>
+
+      <section aria-labelledby="education-title">
+        <div class="section-heading">
+          <h2 id="education-title">Formación</h2>
+          <p class="section-note">Mi recorrido académico</p>
+        </div>
+        <div class="education-list">
+          <article class="education-card">
+            <span class="card-label">Grado · Completado</span>
+            <h3>Grado en Marketing</h3>
+            <p>Universidad de Murcia</p>
+          </article>
+          <article class="education-card">
+            <span class="card-label">Máster · En curso</span>
+            <h3>Data Science, Big Data &amp; Business Analytics</h3>
+            <p>Universidad Complutense de Madrid</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="focus" aria-label="Áreas de interés">
+        <span class="focus-label">Áreas de interés</span>
+        <span class="tag">Marketing</span>
+        <span class="tag">Data Science</span>
+        <span class="tag">Big Data</span>
+        <span class="tag">Business Analytics</span>
+      </section>
+    </main>
+
+    <footer>
+      <span>Sergio · Perfil profesional</span>
+      <span>Marketing &amp; análisis de datos</span>
+    </footer>
+  </div>
+</body>
+</html>
